@@ -22,14 +22,13 @@ def index_submit():
         session['statusAnswer'] = 'Too high!'
     elif (request.form['guessNum']) < str(session['randomNum']):
         session['statusAnswer'] = 'Too low!'
-    # else:
-        # statusAnswer = 'Try again!'
     return render_template('index.html', statusAnswer=session['statusAnswer'])
 
 @app.route('/playAgain',methods=['POST'])
 def index_playAgain():
     print "play again"
     session['randomNum'] = random.randrange(0,101)
-    return redirect('/')
+    session['guessNum'] = 0
+    return render_template('index.html', randomNum=session['randomNum'])
 
 app.run(debug=True)

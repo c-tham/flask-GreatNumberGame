@@ -7,7 +7,7 @@
     padding: 20px;
     text-align: center;
 }
-.answerWrong {
+.redbox{
     line-height: 100px;
     width: 200px;
     margin: 0px auto;
@@ -16,7 +16,7 @@
     background-color: red;
     color: white;
 }
-.answerCorrect {
+.greenbox {
     line-height: 100px;
     width: 200px;
     margin: 0px auto;
